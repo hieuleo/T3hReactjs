@@ -1,0 +1,326 @@
+
+*, *::after,*::before{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     -moz-box-sizing: border-box;
+     -ms-box-sizing: border-box;
+     -webkit-box-sizing: border-box;
+}
+
+html {
+     font-size: 62.5%;
+}
+
+.body {
+     font-family: 'Lato', sans-serif;
+     line-height: 1px;
+     font-weight: 400;
+}
+
+a{ text-decoration: none; }
+button{ cursor: pointer;}
+input,textarea,button {
+     outline: none;
+     box-shadow: none;
+     font-family: 'Lato', sans-serif;
+}
+
+li, ul{ 
+     display:inline-block;
+}
+
+
+/* variables- vars */
+:root{
+     --primary-color: #64c29e;
+     --heading-color: #4d4959;
+     --heading-color-2: #353738;
+     --text-color: #848789;
+     --bgLight: #f7f7f7;
+     --bgWhite: #ffffff;
+     --bgDark: #282f35;
+     --input-border: #d3d7d9;
+     --input-text: #929292;
+}
+
+/* main */
+.main{
+     width: 160rem;
+     margin: 0 auto;
+     font-family: 'Lato', sans-serif;
+}
+
+/* heading */
+.header {
+     min-height: 80rem;
+     background-image: url(../IMG/xedap/imgheading.jpg);
+     background-repeat: no-repeat;
+     background-size: cover;
+     -webkit-background-size: cover;
+     background-position: center center;
+}
+
+.header__list{
+     display: flex;
+     justify-content: center;
+     padding-top: 3.5rem;
+     align-items: center;
+}
+
+.header__item{
+     font-weight: bold;
+     padding: 0 3.4rem;
+     position: relative;
+}
+
+.header__item:first-child::after,
+.header__item:nth-child(4)::after{
+     content: ".";
+     color: var(--heading-color);
+     position: absolute;
+     bottom: 0;
+     right: 0;
+     font-size: 1.3rem;
+}
+
+.header__link{
+     color: var(--heading-color);
+     position: relative;
+     display: block;
+     text-transform: uppercase;
+     text-decoration: none;
+     font-size: 1.3rem;
+     font-weight: bold;
+     letter-spacing: 0.2rem;
+}
+
+.feature{
+
+}
+
+.feature__header{
+     background-color: var(--bgLight);
+     padding: 11.7rem 1.6rem 14rem;
+     text-align: center;
+}
+
+.feature__img--top{
+     margin-bottom: 3.4rem;
+}
+
+.feature__header--heading{
+     color: var(--heading-color-2);
+     font-size: 1.8rem;
+     font-weight: bold;
+     margin: 0 0 3.5rem;
+     letter-spacing: 0.6rem;
+     line-height: 1.6;
+}
+
+.feature__header--des{
+     color: var(--text-color);
+     font-size: 1.8rem;
+     line-height: 1.6;
+     max-width: 108rem;
+     margin: 0 auto;
+}
+
+.feature__content{
+}
+
+
+.feature__list{
+     width: 100%;
+}
+
+.feature__item{
+     width: 100%;
+     height: 60rem;
+     display: flex;
+     overflow: hidden;
+     flex-wrap: row;
+     flex-wrap: nowrap;
+}
+.feature__item--img{
+     width: 66.66667%;
+     position: relative;
+}
+
+.img__bg{
+     width: 100%;   
+     height: 100%;
+     object-fit: cover;
+}
+
+.img__bg--icon{
+     position: absolute;
+     top: 50%;
+     right: 50%;
+     transform: translate(50%,-50%)
+}
+
+.feature__item--content{
+     background-color: var(--bgWhite);
+     position: relative;
+     width: 33.33333%;
+}
+
+
+.feature__item--content--top{
+     display: flex;
+     align-items: center;
+     flex-direction: column;
+     height: 100%;
+     padding: 0 7rem;
+}
+
+.feature__item--content--img{
+     padding: 5.8rem 0 3rem;
+     margin : 0 auto;
+     display: block;
+}
+
+.feature__item--content--header{
+     font-size: 1.8rem;
+     font-weight: bold;
+     letter-spacing: 0.5rem;
+     line-height: 1.6;
+     color: var(--heading-color-2);
+     padding-bottom: 2.6rem;
+     display: block;
+     text-align: center;
+}
+.feature__item--content--des{
+     font-size: 1.6rem;
+     line-height: 1.6;
+     text-align: justify;    
+     letter-spacing: 0.1rem; 
+     position: relative;
+     color: var(--text-color);
+}
+
+.feature__item--content--des::after{
+     content: '';
+     height: 0.1rem;
+     width: 5rem;
+     background-color: #d7d7d7;
+     position: absolute;
+     bottom: -4.3rem;
+     right: 50%;
+     transform: translateX(50%)
+}
+
+.feature__item--content--bottom{
+     height: 20rem;
+     position: absolute;
+     bottom: 0;
+}
+
+
+.feature__item--content--bottom::after{
+     content: '';
+     border-style: solid;
+     border-width: 1rem 2rem ;
+     border-color: var(--bgWhite) transparent transparent transparent;
+     position: absolute;
+     right: 50%;
+     transform: translateX(50%);
+     top: 0;
+}
+
+.row-2 .feature__item--img{
+     order: 2;
+}
+
+.row-2 .feature__item--content{
+     order: 1;
+}
+
+.row-3 .feature__item--img{
+     width: 33.33333%;
+}
+
+
+/* feature__comment */
+.feature__comment{
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     padding: 12.4rem 0 6.8rem;
+     background-color: #f7f7f7;
+}
+
+.feature__comment > i{
+     color: #56c7ee;
+     font-size: 2.7rem;
+     margin-bottom: 3.8rem;
+}
+
+.feature__comment__header{
+     display: flex;
+     align-items: center;
+     padding-bottom: 2.7rem;
+     
+}
+
+.feature__comment--name{
+     font-size: 1.8rem;
+     font-weight: bold;
+     letter-spacing: 0.3rem;
+     line-height: 1.6;
+     color:var(--heading-color-2);
+     position: relative;
+     
+}
+
+.feature__comment--name::before{
+     content: "/";
+     font-size: 1.8rem;
+     line-height: 1.6;
+     color: var(--text-color);
+     position: absolute;
+     right: -2rem;
+}
+
+.feature__comment--time{
+     font-size: 1.8rem;
+     font-weight: bold;
+     letter-spacing: 0.3rem;
+     line-height: 1.6;
+     color: var(--text-color);
+     margin-left: 3.2rem;
+}
+
+
+.feature__comment__body {
+
+}
+
+.feature__comment--content{
+     font-size: 2.4rem;
+     color: var(--text-color);
+     font-style: italic;
+     padding: 0 30rem;
+     text-align: center;
+}
+
+.feature__comment--list{
+     display: block;
+     text-align: center;
+}
+
+.feature__comment--item{
+     background-color: #a9afb3;
+     width: 1.1rem;
+     height: 1.1rem;
+     border-radius: 50%;
+     border: 1px solid #c9c9c9;
+     margin-top: 10.9rem;     
+     cursor: pointer;
+}
+
+.feature__comment--item:nth-child(2),
+.feature__comment--item:nth-child(3){
+     background-color: #f7f7f7;
+}
